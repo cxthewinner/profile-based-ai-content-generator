@@ -1,0 +1,85 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+
+# Runtime-generated images
+/backend/app/static/generated/
+
+# Shared caches and local AI model artifacts (keep backend/app/models/ source)
+.cache/
+.huggingface/
+/backend/model_cache/
+/backend/model_weights/
+/backend/**/checkpoints/
+/backend/**/*.safetensors
+/backend/**/*.ckpt
+/backend/**/*.pt
+/backend/**/*.pth
+/backend/**/pytorch_model*.bin
+/backend/**/diffusion_pytorch_model*.bin
+
+# Logs
+*.log
+*.out
+*.err
+*.log.*
+logs/
+reload-*.log
+server-*.log
+simple-*.log
+
+# Frontend
+node_modules/
+dist/
+build/
+.vite/
+.vite-temp/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+coverage/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Private project documents
+/*.pdf

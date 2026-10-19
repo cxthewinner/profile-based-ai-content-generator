@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+pydantic
+python-dotenv
+cryptography
+transformers
+torch
+diffusers
+accelerate
+sentence-transformers
+pillow
