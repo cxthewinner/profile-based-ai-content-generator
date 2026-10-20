@@ -17,13 +17,63 @@ React と FastAPI を組み合わせ、ローカルでの文章生成、外部 A
 
 ## Screenshots
 
+The screenshots show the Chinese interface. Japanese annotations explain the controls and workflow; they do not represent a Japanese-language UI.
 
 ### Home Screen（ホーム画面）
+
+Start a new generation request or open saved history from the home screen.
 
 | Original UI | Japanese Annotation |
 |:---:|:---:|
 | <img src="docs/screenshots/home-original.png" width="300" alt="Original home screen"> | <img src="docs/screenshots/home-annotated-ja.png" width="300" alt="Home screen with Japanese annotations"> |
-  
+
+#### Generation Workflow（生成フロー）
+
+The lower section of the home screen introduces profile interpretation, text generation, and visual creation.
+
+| Original UI | Japanese Annotation |
+|:---:|:---:|
+| <img src="docs/screenshots/home-workflow-.png" width="300" alt="Original generation workflow section on the home screen"> | <img src="docs/screenshots/home-workflow-ja.png" width="300" alt="Home screen generation workflow with Japanese annotations"> |
+
+### Content Configuration（コンテンツ設定）
+
+Enter interests, a target audience, a writing style, a publishing scenario, and additional instructions.
+
+**Original UI**
+
+<p align="left">
+  <img src="docs/screenshots/profile-original.png" width="650" alt="Original content configuration screen">
+</p>
+
+**Japanese Annotation**
+
+<p align="left">
+  <img src="docs/screenshots/profile-annotated-ja.png" width="650" alt="Content configuration screen with Japanese annotations">
+</p>
+
+### Generated Result（生成結果）
+
+Review the generated image, title, body, tags, and profile summary.
+
+**Original UI**
+
+<p align="left">
+  <img src="docs/screenshots/result-original.png" width="650" alt="Original generated result screen">
+</p>
+
+**Japanese Annotation**
+
+<p align="left">
+  <img src="docs/screenshots/result-annotated-ja.png" width="650" alt="Generated result screen with Japanese annotations">
+</p>
+
+### History（生成履歴）
+
+Browse saved content, open record details, refresh the list, or delete a record.
+
+| Original UI | Japanese Annotation |
+|:---:|:---:|
+| <img src="docs/screenshots/history-original.png" width="300" alt="Original generation history screen"> | <img src="docs/screenshots/history-annotated-ja.png" width="300" alt="Generation history screen with Japanese annotations"> |
 
 ## Key Features
 
