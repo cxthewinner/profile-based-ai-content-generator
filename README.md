@@ -140,7 +140,7 @@ The image service makes an HTTP GET request with a 90-second timeout, rejects em
 
 The frontend uses a 180-second generation request timeout and a 30-second default timeout. It displays request errors and resets loading state. These values are configured limits, not measured response times; aborting a browser request does not guarantee cancellation of backend work.
 
-Fallback supports a degraded result, but does not guarantee request success. Image decoding, database failures, and placeholder integrity still need verification. The backend does not currently return a structured flag identifying fallback output.
+Fallback supports a degraded result, but does not guarantee request success. End-to-end AI generation and database-failure handling remain unverified. The backend does not currently return a structured flag identifying fallback output.
 
 ### Persistence and application scope
 
@@ -150,12 +150,14 @@ Generation is synchronous within the request flow. There is no background job qu
 
 ## Getting Started
 
-**Verification status:** the commands below are derived from the repository configuration. They were not executed during this documentation update; clean installation, model loading, external API compatibility, and end-to-end operation remain to be verified.
+**Verified on Windows:** Node.js 24.14.0, npm 11.9.0, and Python 3.12.10. Dependency installation, the Vite build, frontend/backend startup, and SQLite history API checks passed. API checks used an isolated temporary database.
+
+**Not tested:** Qwen model loading/inference, the external image API, and the complete AI generation flow. macOS/Linux startup has not been verified.
 
 ### Prerequisites
 
-- Node.js 22 or later with npm satisfies the declared Vite and React Router engine ranges in the lockfile; this is not a tested runtime claim.
-- Python 3.10 or later is required by the backend syntax. A compatible Python/package version combination has not yet been established.
+- Node.js 22 or later with npm satisfies the declared Vite and React Router engine ranges in the lockfile. Only the Windows versions listed above have been verified.
+- Python 3.10 or later is required by the backend syntax; Python 3.12.10 was used for the Windows verification above.
 - Internet access for dependency installation, initial model downloads, and external image generation.
 - A writable backend directory for SQLite and generated images. Hardware requirements have not been measured.
 
@@ -204,7 +206,7 @@ npm run dev
 
 Open the local address printed by Vite. The frontend currently sends API requests to the hardcoded `http://127.0.0.1:8000` address in `frontend/src/app/api.ts`.
 
-`npm run build` is available in the package scripts, but build success was not verified during this documentation update.
+`npm run build` completed successfully in the verified Windows environment.
 
 ## Environment Variables
 
@@ -246,7 +248,7 @@ The generation response contains `id`, `profile_summary`, `title`, `content`, `t
 - Fallback output is not identified explicitly in API responses, and broad exception handling limits diagnostics.
 - Deleting a history record does not delete its saved image. History listing is unpaginated.
 - Authentication, user isolation, rate limiting, and restricted production CORS settings are absent.
-- No automated test suite, CI/CD pipeline, or production deployment configuration is provided. Clean-install reproducibility remains unverified.
+- No automated test suite, CI/CD pipeline, or production deployment configuration is provided. Dependency versions remain unpinned, so repeatability of future installations is not guaranteed.
 
 ## Future Improvements
 
