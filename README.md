@@ -17,63 +17,59 @@ React と FastAPI を組み合わせ、ローカルでの文章生成、外部 A
 
 ## Screenshots
 
-The screenshots show the Chinese interface. Japanese annotations explain the controls and workflow; they do not represent a Japanese-language UI.
+The screenshots include Japanese functional annotations. The application interface itself remains primarily Chinese; these annotations do not indicate Japanese-language UI support.
 
 ### Home Screen（ホーム画面）
 
-Start a new generation request or open saved history from the home screen.
+The home screen introduces the application and provides entry points for content generation and saved history.
 
-| Original UI | Japanese Annotation |
-|:---:|:---:|
-| <img src="docs/screenshots/home-original.png" width="300" alt="Original home screen"> | <img src="docs/screenshots/home-annotated-ja.png" width="300" alt="Home screen with Japanese annotations"> |
+<p align="left">
+  <img src="docs/screenshots/home-annotated-ja.png" width="600" alt="Home screen with Japanese functional annotations">
+</p>
 
-#### Generation Workflow（生成フロー）
+### Generation Workflow（生成フロー）
 
-The lower section of the home screen introduces profile interpretation, text generation, and visual creation.
+The workflow section outlines profile interpretation, text generation, and image generation.
 
-| Original UI | Japanese Annotation |
-|:---:|:---:|
-| <img src="docs/screenshots/home-workflow-.png" width="300" alt="Original generation workflow section on the home screen"> | <img src="docs/screenshots/home-workflow-ja.png" width="300" alt="Home screen generation workflow with Japanese annotations"> |
+<p align="left">
+  <img src="docs/screenshots/home-workflow-ja.png" width="600" alt="Generation workflow with Japanese functional annotations">
+</p>
 
 ### Content Configuration（コンテンツ設定）
 
-Enter interests, a target audience, a writing style, a publishing scenario, and additional instructions.
-
-**Original UI**
+The first part of the form shows input progress, interest keywords, and the target audience.
 
 <p align="left">
-  <img src="docs/screenshots/profile-original.png" width="650" alt="Original content configuration screen">
+  <img src="docs/screenshots/profile-annotated-ja.png" width="600" alt="Interest and target audience fields with Japanese functional annotations">
 </p>
 
-**Japanese Annotation**
+The second part contains writing-style and publishing-scenario choices, followed by additional instructions.
 
 <p align="left">
-  <img src="docs/screenshots/profile-annotated-ja.png" width="650" alt="Content configuration screen with Japanese annotations">
+  <img src="docs/screenshots/profile-options-annotated-ja.png" width="600" alt="Style, scenario, and additional instruction fields with Japanese functional annotations">
 </p>
 
-### Generated Result（生成結果）
+### Generation Result（生成結果）
 
-Review the generated image, title, body, tags, and profile summary.
-
-**Original UI**
+The result overview shows completion status, selected settings, and the generated image preview.
 
 <p align="left">
-  <img src="docs/screenshots/result-original.png" width="650" alt="Original generated result screen">
+  <img src="docs/screenshots/result-image-annotated-ja.png" width="600" alt="Generation status and generated image preview with Japanese functional annotations">
 </p>
 
-**Japanese Annotation**
+The content section displays the generated title, body, tags, profile summary, and generation details.
 
 <p align="left">
-  <img src="docs/screenshots/result-annotated-ja.png" width="650" alt="Generated result screen with Japanese annotations">
+  <img src="docs/screenshots/result-text-annotated-ja.png" width="600" alt="Generated text and profile summary with Japanese functional annotations">
 </p>
 
 ### History（生成履歴）
 
-Browse saved content, open record details, refresh the list, or delete a record.
+The history page lists saved entries with thumbnails and timestamps, alongside refresh, detail, and delete controls.
 
-| Original UI | Japanese Annotation |
-|:---:|:---:|
-| <img src="docs/screenshots/history-original.png" width="300" alt="Original generation history screen"> | <img src="docs/screenshots/history-annotated-ja.png" width="300" alt="Generation history screen with Japanese annotations"> |
+<p align="left">
+  <img src="docs/screenshots/history-annotated-ja.png" width="600" alt="Saved generation history with Japanese functional annotations">
+</p>
 
 ## Key Features
 
