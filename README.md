@@ -17,7 +17,13 @@ React と FastAPI を組み合わせ、ローカルでの文章生成、外部 A
 
 ## Screenshots
 
-Screenshots will be added after a privacy review of actual application captures.
+
+### Home Screen（ホーム画面）
+
+| Original UI | Japanese Annotation |
+|:---:|:---:|
+| <img src="docs/screenshots/home-original.png" width="300" alt="Original home screen"> | <img src="docs/screenshots/home-annotated-ja.png" width="300" alt="Home screen with Japanese annotations"> |
+  
 
 ## Key Features
 
