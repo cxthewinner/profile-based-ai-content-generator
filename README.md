@@ -17,7 +17,59 @@ React と FastAPI を組み合わせ、ローカルでの文章生成、外部 A
 
 ## Screenshots
 
-Screenshots will be added after a privacy review of actual application captures.
+The screenshots include Japanese functional annotations. The application interface itself remains primarily Chinese; these annotations do not indicate Japanese-language UI support.
+
+### Home Screen（ホーム画面）
+
+The home screen introduces the application and provides entry points for content generation and saved history.
+
+<p align="left">
+  <img src="docs/screenshots/home-annotated-ja.png" width="600" alt="Home screen with Japanese functional annotations">
+</p>
+
+### Generation Workflow（生成フロー）
+
+The workflow section outlines profile interpretation, text generation, and image generation.
+
+<p align="left">
+  <img src="docs/screenshots/home-workflow-ja.png" width="600" alt="Generation workflow with Japanese functional annotations">
+</p>
+
+### Content Configuration（コンテンツ設定）
+
+The first part of the form shows input progress, interest keywords, and the target audience.
+
+<p align="left">
+  <img src="docs/screenshots/profile-annotated-ja.png" width="600" alt="Interest and target audience fields with Japanese functional annotations">
+</p>
+
+The second part contains writing-style and publishing-scenario choices, followed by additional instructions.
+
+<p align="left">
+  <img src="docs/screenshots/profile-options-annotated-ja.png" width="600" alt="Style, scenario, and additional instruction fields with Japanese functional annotations">
+</p>
+
+### Generation Result（生成結果）
+
+The result overview shows completion status, selected settings, and the generated image preview.
+
+<p align="left">
+  <img src="docs/screenshots/result-image-annotated-ja.png" width="600" alt="Generation status and generated image preview with Japanese functional annotations">
+</p>
+
+The content section displays the generated title, body, tags, profile summary, and generation details.
+
+<p align="left">
+  <img src="docs/screenshots/result-text-annotated-ja.png" width="600" alt="Generated text and profile summary with Japanese functional annotations">
+</p>
+
+### History（生成履歴）
+
+The history page lists saved entries with thumbnails and timestamps, alongside refresh, detail, and delete controls.
+
+<p align="left">
+  <img src="docs/screenshots/history-annotated-ja.png" width="600" alt="Saved generation history with Japanese functional annotations">
+</p>
 
 ## Key Features
 
