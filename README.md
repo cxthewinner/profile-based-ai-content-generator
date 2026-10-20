@@ -97,22 +97,37 @@ The active database is SQLite; no MySQL server is required.
 
 ## Architecture
 
+### Content Generation Flow
+
 ```mermaid
 flowchart TD
-    UI["React UI: profile input"] -->|POST /api/generate| API["FastAPI generation route"]
-    API --> Profile["Rule-based profile summary"]
-    Profile --> Text["Local Qwen text generation or template fallback"]
-    Text --> Prompt["Image prompt construction"]
-    Profile --> Prompt
-    Prompt --> Image["External image API or placeholder fallback"]
-    Image --> Files["Local static images"]
-    API -->|Save inputs, summary, text, and image path| DB[("SQLite")]
-    API -->|Return result| Result["React result view"]
-    History["React history view"] -->|List, detail, or delete through FastAPI| DB
-    DB -->|History responses through FastAPI| History
+    Input["User input"] --> React["React form"]
+    React --> API["FastAPI"]
+    API --> Profile["Rule-based summary"]
+    Profile --> Text["Qwen or template"]
+    Text --> Prompt["Image prompt"]
+    Prompt --> Image["Image API or placeholder"]
+    Image --> Store[("Save to SQLite")]
+    Store --> Result["React result page"]
 ```
 
-The generation route coordinates these steps sequentially. Image bytes are stored under `backend/app/static/generated/`; SQLite stores their paths rather than the image bytes.
+FastAPI coordinates the generation steps in a single request. It builds a rule-based profile summary and uses local Qwen inference for the title, body, and tags, with template fallback when model loading or inference fails.
+
+The image prompt uses the profile, original inputs, and generated text. The external image service is called with a negative prompt; failures trigger an attempt to return a local placeholder. Downloaded images are saved under `backend/app/static/generated/`. FastAPI saves the inputs, summary, text, and image path to SQLite, then returns the result to React.
+
+### History Management Flow
+
+```mermaid
+flowchart TD
+    History["React history page"] --> API["FastAPI history API"]
+    API -->|Read or delete| Store[("SQLite")]
+    Store --> Response["FastAPI response"]
+    Response --> View["React history or detail view"]
+```
+
+The history API provides `GET /api/history` for the list and `GET /api/history/{record_id}` for details. React displays the list on the history page and opens individual records in the result view.
+
+`DELETE /api/history/{record_id}` deletes a database record and returns a confirmation. React removes the entry from its displayed list; the saved image file is not deleted.
 
 The backend separates routes, request/response schemas, generation services, and persistence operations. The frontend centralizes HTTP requests in `frontend/src/app/api.ts`.
 
