@@ -204,7 +204,7 @@ def _ensure_placeholder_image() -> str:
             image.save(PLACEHOLDER_PATH)
         except Exception:
             placeholder_bytes = base64.b64decode(
-                "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9WnR8i0AAAAASUVORK5CYII="
+                "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP48vYxAAWdAsXC4uuXAAAAAElFTkSuQmCC"
             )
             PLACEHOLDER_PATH.write_bytes(placeholder_bytes)
     return "/static/placeholder.png"
